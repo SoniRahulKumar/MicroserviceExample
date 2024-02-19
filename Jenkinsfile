@@ -7,6 +7,7 @@ pipeline{
       }
     }
     stage('Build'){
+      agent { docker { image 'maven:3.9.6-eclipse-temurin-17-alpine' } }
       steps{
         echo('Building')
         sh 'mvn --version'
