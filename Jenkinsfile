@@ -4,7 +4,7 @@ pipeline{
     stage('Clone Repo'){
       steps{
        echo('Code Chekout from Repository')
-		   git url: 'https://github.com/SoniRahulKumar/MicroserviceExample.git' , branch: 'master'
+	 git url: 'https://github.com/SoniRahulKumar/MicroserviceExample.git' , branch: 'master'
       }
     }
     stage('Build'){
