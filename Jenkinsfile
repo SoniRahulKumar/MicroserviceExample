@@ -3,14 +3,14 @@ pipeline{
   stages{
     stage('Clone Repo'){
       steps{
-       echo('Code Chekout from Repository')
-	 git url: 'https://github.com/SoniRahulKumar/MicroserviceExample.git' , branch: 'master'
+        echo('Code Chekout from Repository')
+	      git url: 'https://github.com/SoniRahulKumar/MicroserviceExample.git' , branch: 'master'
       }
     }
     stage('Build'){
       steps{
-        echo('Building')
-          sh 'mvn -B -DskipTests clean package'
+		echo('Building')
+		  sh 'mvn -B -DskipTests clean package'
       }
     }
     stage('Deploy'){
