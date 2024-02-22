@@ -1,14 +1,16 @@
 pipeline{
   agent any
   stages{
-    stage('Hello'){
+    stage('Clone Repo'){
       steps{
-        echo('Hello world')
+       echo('Code Chekout from Repository')
+		   git url: 'https://github.com/SoniRahulKumar/MicroserviceExample.git' , branch: 'master'
       }
     }
     stage('Build'){
       steps{
         echo('Building')
+        mvn 'package'
       }
     }
     stage('Deploy'){
