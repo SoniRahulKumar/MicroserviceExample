@@ -1,5 +1,8 @@
 pipeline{
   agent any
+  tools {
+        maven 'apache-maven-3.9.1' 
+  }
   stages{
     stage('Clone Repo'){
       steps{
@@ -8,7 +11,6 @@ pipeline{
       }
     }
     stage('Build'){
-      agent { docker 'maven:3.9.3-eclipse-temurin-17' }
       steps{
 	echo('Building')
 	  sh 'mvn -B -DskipTests clean package'
