@@ -2,7 +2,7 @@ pipeline{
   agent any
   environment {
 	MAVEN_HOME = tools 'Maven'
-	PATH = "$MAVEN_HOME/bin:$PATH
+	PATH = "$MAVEN_HOME/bin:$PATH"
   }
   stages{
     stage('Clone Repo'){
