@@ -15,7 +15,7 @@ pipeline{
       steps{
 	echo('Building')
 	  sh 'mvn clean'
-	  bat ' mvn -f service-registry/pom.xml clean install'
+	  bat ' mvn -f service-registry/pom.xml'
       }
     }
     stage('Deploy'){
