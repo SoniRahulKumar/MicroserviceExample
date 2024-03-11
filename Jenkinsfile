@@ -15,7 +15,7 @@ pipeline{
       steps{
 	echo('Building')
 	  sh 'mvn clean'
-	  bat ' mvn -f service-registry/pom.xml'
+	  mvn - f ("https://github.com/SoniRahulKumar/MicroserviceExample/service-registry/pom.xml") compile
       }
     }
     stage('Deploy'){
