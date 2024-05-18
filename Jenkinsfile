@@ -15,7 +15,7 @@ pipeline{
       steps{
 	echo('Building')
 	  sh 'mvn clean'
-	   mvn - f ("https://github.com//SoniRahulKumar//MicroserviceExample//service-registry//pom.xml")
+	   mvn compile
       }
     }
     stage('Deploy'){
